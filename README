@@ -1,0 +1,4 @@
+Sturmann is a navigating system that produces voice commands while you're running your route.
+Sturmann gets a set of coordinates representing your route and calculates the voice navigating commands with a special format.
+It uses your current GPS location to determine where you are on the route and decide when to produce voice command.
+This system can be useful for (motor)bike riders, rally racers or just an ordinary drivers who would like to follow the route they don't know well.
