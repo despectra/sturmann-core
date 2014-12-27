@@ -1,4 +1,12 @@
+# Sturmann Project #
+
+## Overview ##
 Sturmann is a navigating system that produces voice commands while you're running your route.
+Define your route on your android device using Google maps and Sturmann will calculate guiding commands for you.
+
+## How it works##
 Sturmann gets a set of coordinates representing your route and calculates the voice navigating commands with a special format.
 It uses your current GPS location to determine where you are on the route and decide when to produce voice command.
+
+## Usage ##
 This system can be useful for (motor)bike riders, rally racers or just an ordinary drivers who would like to follow the route they don't know well.
