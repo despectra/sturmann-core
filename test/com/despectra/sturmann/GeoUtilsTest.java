@@ -37,4 +37,31 @@ public class GeoUtilsTest extends TestCase {
         assertEquals(0.01798, actualDistance, actualDistance / 1000);
     }
 
+    @Test
+    public void testAngleTooSmall() throws Exception {
+        Location before = Location.byDegrees(47.897390, 41.280182, 0);
+        Location current = Location.byDegrees(58.236847, 41.455963, 0);
+        Location after = Location.byDegrees(47.897159, 41.341547, 0);
+        double angle = GeoUtils.angleBy3Locations(before, current, after);
+        assertEquals(1, angle, 1);
+    }
+
+    @Test
+    public void testAngle90Deg() throws Exception {
+        Location before = Location.byDegrees(47.897390, 41.280182, 0);
+        Location current = Location.byDegrees(58.236847, 41.455963, 0);
+        Location after = Location.byDegrees(58.230548, 42.746439, 0);
+        double angle = GeoUtils.angleBy3Locations(before, current, after);
+        assertEquals(90, angle, 1);
+    }
+
+    @Test
+    public void testAngleSmallDist() throws Exception {
+        Location before = Location.byDegrees(58.217066, 41.647407, 0);
+        Location current = Location.byDegrees(58.219077, 41.651784, 0);
+        Location after = Location.byDegrees(58.219360, 41.652385, 0);
+        double angle = GeoUtils.angleBy3Locations(before, current, after);
+        assertEquals(180, angle, 2);
+    }
+
 }
